@@ -145,9 +145,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Phone number validation (Indonesia: starts with 08, 10-13 digits)
-    const phonePattern = /^08\d{8,11}$/;
+    const phonePattern = /^(?:\+628|08)[1-9][0-9]{7,10}$/;
     if (!phonePattern.test(phoneInput.value.trim())) {
-      phoneError.textContent = "Please enter a valid Indonesian phone number.";
+      phoneError.textContent = "Phone number is not valid. Please use +62xx or 08xx phone number format.";
       phoneInput.classList.add("is-invalid");
       valid = false;
     } else {
