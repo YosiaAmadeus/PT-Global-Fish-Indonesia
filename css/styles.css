@@ -252,7 +252,7 @@ html, body {
   }
 
   .carousel-control-next, .carousel-control-prev {
-    height: 80%;
+    height: 100%;
   }
 
   /* Tambahkan animasi hover di ikon carousel */
@@ -340,4 +340,38 @@ html, body {
 .whatsapp-float:hover {
   background-color: #1ebe5d;
   transform: scale(1.1);
+}
+
+/* --- RESPONSIVE HOME SECTION (h1 headline) --- */
+.home-section {
+  padding-top: 100px; /* Jaga jarak dari navbar */
+  text-align: center;
+}
+
+.home-section h1 {
+  font-size: clamp(24px, 5vw, 48px);
+  line-height: 1.2;
+  scroll-margin-top: 100px;
+  margin: 0 16px;
+  word-break: break-word;
+}
+
+@media (max-width: 500px) {
+  .whatsapp-float {
+    width: 60px;
+    height: 60px;
+    font-size: 35px;
+    bottom: 16px;
+    right: 16px;
+    padding: 4px 14px;
+  }
+}
+
+/* --- FIXED NAVBAR SAFETY --- */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: white; /* atau sesuai warna latar navbar kamu */
 }
