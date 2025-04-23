@@ -2,6 +2,10 @@ html:focus-within{
   scroll-behavior: smooth !important;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 :root {
     /* --steel-teel: #538392; belum tau mau warna apa
     --cadet-blue: #6295A2   ; belum tau mau warna apa
