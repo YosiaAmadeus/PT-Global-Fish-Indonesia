@@ -1,0 +1,14 @@
+All:
+Cari color pallete (tanya client dulu udah oke apa belum, kalo udah gausah lakukan step ini)
+Buat line pemisah/pembeda di setiap section (tanya client dulu udah oke apa belum, kalo udah gausah lakukan step ini)
+Contacts - Atur Forms (apakah perlu success and error message?)
+Hosting di netlify (otw)
+
+Extra?:
+Beli domain (pending, tanya client)
+Setup domain kustom (pending, tanya client)
+Setup email PT (pending, tanya client)
+
+Not so important:
+Gallery - Mau tambahin ikon play jangan hilang meskipun ga dihover (failed)
+Gallery - Setelah pencet next atau prev slide, hovernya stay sampe klik ditempat lain (failed)

@@ -1,0 +1,32 @@
+1. Logo: 
+Done
+
+2. Color Pallete:
+
+🎨 Palette 2: Tropical Export
+	
+
+3. Font:
+
+Heading - Poppins (700, 48px)
+Subheading - Poppins (500, 28px)
+Body - Roboto (300, 16px)
+
+4. Slogan/tagline: - 
+
+5. Foto2:
+Done
+
+6. Video2:
+Done
+
+7. Section:
+a. Home: video background + tagline
+b. About: menjelaskan company
+c. Product: menjelaskan produk (baru 1)
+d. Gallery: menampilkan aktivitas gudang
+e. Contact: bagian kiri form submit email, bagian kanan ada alamat kantor, ada logo email, ig, fb. ada button fixed untuk wa (mengarah ke wa vanno)
+
+8. Nomor HP: 0812-8469-3799
+Email: email pt (belom bikin)
+link social media: ig + fb (belom bikin)

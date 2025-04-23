@@ -1,0 +1,339 @@
+html:focus-within{
+  scroll-behavior: smooth !important;
+}
+
+:root {
+    /* --steel-teel: #538392; belum tau mau warna apa
+    --cadet-blue: #6295A2   ; belum tau mau warna apa
+    --pewter-blue: #80B9AD; belum tau mau warna apa
+    --light-moss-green: #B3E2A7; belum tau mau warna apa */
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Roboto', sans-serif;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: var(--light-grey); /* apaan nih */
+    color: #333;
+    padding-top: 58px;
+  }
+  
+  h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+  }
+  
+  h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 500;
+  }
+
+  .navbar-nav li {
+    font-size: 20px;
+    margin-left: 15px;
+  }
+
+  .navbar-nav .nav-link {
+    position: relative;
+    color: black !important;
+    padding: 10px 15px;
+    transition: all 0.3s ease-in-out;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.5px;
+  }
+  
+  .navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 8px;
+    transform: translateX(-50%) scaleX(0);
+    width: 80%;
+    height: 2px;
+    background: linear-gradient(90deg, #000000, #000000);
+    transition: transform 0.3s ease;
+    transform-origin: center;
+    border-radius: 5px;
+  }
+  
+  .navbar-nav .nav-link:hover::after {
+    transform: translateX(-50%) scaleX(1);
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #13054e94 !important;
+    text-shadow: 0 0 5px rgba(185, 185, 184, 0.6);
+  }
+  
+  /* Optional: Active item styling */
+  .navbar-nav .nav-link.active {
+    color: #ff0000 !important;
+  }  
+
+  #home, #about, #product, #gallery, #contact {
+    scroll-margin-top: 58px;
+  }
+
+  .home-section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .home-section a {
+    background-color: #1042ad; /* warna utama */
+  color: #F6F8D5; /* teks kontras */
+  padding: 12px 28px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transition: all 0.35s ease;
+  letter-spacing: 0.5px;
+}
+
+.btn-custom:hover {
+  background-color: #3a9cff;
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+  
+  #bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+  }
+  
+  .home-content {
+    z-index: 1;
+    padding: 0 15px;
+  }
+  
+  .home-content h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+  }
+  
+  .home-content p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+  }
+  
+  .about-subheading {
+    text-align: justify;
+  }
+
+  .gallery-section h2 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+  }
+  
+  .gallery-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  }
+  
+  .gallery-section img {
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery-section img:hover {
+    transform: scale(1.03);
+  }
+  
+  .zoom-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: zoom-in;
+  }
+  
+  .zoomable {
+    transition: transform 0.3s ease;
+  }
+  
+  .zoomable:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+    cursor: zoom-in;
+  }
+  
+  /* Modal zoom */
+  .image-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image-modal img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255,255,255,0.5);
+  }
+  
+  .carousel-item video {
+    max-height: 80vh;
+    object-fit: contain;
+    margin: 0 auto;
+  }
+
+  .carousel-indicators [data-bs-target] {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 2px solid #999ca2;
+    box-shadow: 0 0 5px rgba(13, 110, 253, 0.5);
+    transition: all 0.3s ease;
+    margin: 0 6px;
+  }
+  
+  .carousel-indicators .active {
+    background-color: #6b97da;
+    transform: scale(1.2);
+    margin-bottom: 20px;
+  }
+
+  .carousel-item {
+    transition: transform 0.6s ease-in-out;
+  }
+  
+  .carousel-control-next-icon, .carousel-control-prev-icon {
+    background-color: #464444;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    transition: all 0.3s ease;
+  }
+
+  .carousel-control-next, .carousel-control-prev {
+    height: 80%;
+  }
+
+  /* Tambahkan animasi hover di ikon carousel */
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  transform: scale(1.1); /* Contoh efek hover zoom */
+  transition: transform 0.3s ease;
+}
+
+/* Panah default dengan sedikit modifikasi agar lebih terlihat */
+.simple-arrow .carousel-control-prev-icon,
+.simple-arrow .carousel-control-next-icon {
+  filter: brightness(200%) drop-shadow(0 0 4px rgba(0, 0, 0, 0.6));
+  width: 3rem;
+  height: 3rem;
+}
+
+/* Hover effect simple */
+.simple-arrow:hover .carousel-control-prev-icon,
+.simple-arrow:hover .carousel-control-next-icon {
+  filter: brightness(250%) drop-shadow(0 0 6px rgba(0, 0, 0, 0.8));
+}
+
+.video-control {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70px;
+  height: 70px;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 50%;
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+  z-index: 2;
+}
+
+.video-control.play-btn i {
+  font-size: 40px; /* Ikon play */
+}
+
+.video-control.pause-btn i {
+  font-size: 40px; /* Ikon pause */
+  padding: 5px;
+}
+
+.carousel-item video {
+  position: relative;
+  z-index: 1;
+}
+
+.carousel-item:hover .video-control {
+  display: inline-block; /* Menampilkan tombol play/pause ketika video dihover */
+}
+
+.video-control.play-btn i {
+  display: block; /* Tampilkan ikon play ketika video dalam keadaan pause */
+}
+
+.video-control.pause-btn i {
+  display: block; /* Tampilkan ikon pause ketika video dalam keadaan play */
+}
+
+.whatsapp-float {
+  position: fixed;
+  width: 90px;
+  height: 90px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: white;
+  font-size: 50px;
+  padding: 9px 23px;
+  border-radius: 50%;
+  z-index: 9999;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  background-color: #1ebe5d;
+  transform: scale(1.1);
+}
