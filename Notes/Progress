@@ -1,13 +1,12 @@
 All:
-Cari color pallete (tanya client dulu udah oke apa belum, kalo udah gausah lakukan step ini)
-Buat line pemisah/pembeda di setiap section (tanya client dulu udah oke apa belum, kalo udah gausah lakukan step ini)
 Contacts - Atur Forms (apakah perlu success and error message?)
-Hosting di netlify (otw)
+Masih kurang responsif di mobile (dibawah 576 x 599, ga responsif)
+Alamat email di website ganti (info@globalfishid.com)
 
 Extra?:
-Beli domain (pending, tanya client)
-Setup domain kustom (pending, tanya client)
-Setup email PT (pending, tanya client)
+Beli domain (globalfishid.com)
+Setup domain kustom (globalfishid.com)
+Setup email PT (info@globalfishid.com)
 
 Not so important:
 Gallery - Mau tambahin ikon play jangan hilang meskipun ga dihover (failed)
