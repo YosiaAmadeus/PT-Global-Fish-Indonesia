@@ -206,11 +206,13 @@
           <div class="mb-3">
             <label for="email" class="form-label">Email</label>
             <input type="email" class="form-control" id="email" name="email" required>
+            <div class="invalid-feedback" id="email-error"></div>
           </div>
 
           <div class="mb-3">
-            <label for="phone" class="form-label">Phone Number</label>
+            <label for="phone" class="form-label">Phone Number (start with 08xx)</label>
             <input type="tel" class="form-control" id="phone" name="phone" required>
+            <div class="invalid-feedback" id="phone-error"></div>
           </div>
 
           <div class="mb-3">

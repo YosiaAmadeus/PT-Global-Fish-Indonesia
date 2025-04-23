@@ -122,3 +122,41 @@ if (firstVideo) {
   pauseVideo(firstVideo, firstButton); // Pastikan video pertama dalam keadaan pause
 }
 }); 
+
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.forms["contact"];
+  const emailInput = document.getElementById("email");
+  const phoneInput = document.getElementById("phone");
+  const emailError = document.getElementById("email-error");
+  const phoneError = document.getElementById("phone-error");
+
+  form.addEventListener("submit", function (e) {
+    let valid = true;
+
+    // Email validation
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(emailInput.value.trim())) {
+      emailError.textContent = "Please enter a valid email address.";
+      emailInput.classList.add("is-invalid");
+      valid = false;
+    } else {
+      emailError.textContent = "";
+      emailInput.classList.remove("is-invalid");
+    }
+
+    // Phone number validation (Indonesia: starts with 08, 10-13 digits)
+    const phonePattern = /^08\d{8,11}$/;
+    if (!phonePattern.test(phoneInput.value.trim())) {
+      phoneError.textContent = "Please enter a valid Indonesian phone number.";
+      phoneInput.classList.add("is-invalid");
+      valid = false;
+    } else {
+      phoneError.textContent = "";
+      phoneInput.classList.remove("is-invalid");
+    }
+
+    if (!valid) {
+      e.preventDefault(); // stop form from submitting
+    }
+  });
+});
