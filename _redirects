@@ -1,0 +1,6 @@
+# Redirect semua domain ke globalfishid.com
+
+https://www.globalfishid.web.id/_ https://globalfishid.com/:splat 301!
+https://globalfishid.web.id/_ https://globalfishid.com/:splat 301!
+globalfishid.web.id/_ https://globalfishid.com/:splat 301!
+www.globalfishid.com/_ https://globalfishid.com/:splat 301!
